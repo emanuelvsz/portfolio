@@ -1,0 +1,78 @@
+/* styles.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0, #120c56, #000000);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars, .stars2 {
+    position: relative;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: anim-stars 10s linear infinite;
+}
+
+.stars::after, .stars2::after {
+    content: " ";
+    position: absolute;
+    top: 150px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+}
+
+.stars {
+    background-color: red;
+    box-shadow: 
+        50px 30px white,
+        1000px 500px white,
+        778px 378px white,
+        300px 20px white,
+        250px 130px white,
+        200px 50px white,
+        150px 100px white,
+        320px 100px white,
+        /* Adicione mais sombras com posições aleatórias aqui */
+        600px 250px white,
+        400px 200px white,
+        120px 80px white;
+}
+
+.stars2 {
+    box-shadow: 
+        15px 15px white,
+        125px 35px white,
+        50px 80px white,
+        10px 120px white,
+        275px 90px white,
+        230px 10px white,
+        120px 130px white,
+        300px 130px white,
+        220px 115px white,
+        /* Adicione mais sombras com posições aleatórias aqui */
+        50px 20px white,
+        400px 100px white,
+        300px 40px white;
+}
+
+@keyframes anim-stars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
