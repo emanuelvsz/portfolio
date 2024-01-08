@@ -1,16 +1,12 @@
-import React from 'react';
-
-import './styles.css';
-import { AboutCard } from '../../components/aboutCard';
+import { Header } from "../../components/Header";
+import "./styles.css";
 
 function HomePage() {
-    return (
-        <div className='home'>
-            <div className='stars'></div>
-            <div className="lower-stars" ></div>
-            <AboutCard />
-        </div>
-    )
+  return (
+    <div className="container">
+      <Header />
+    </div>
+  );
 }
 
 export { HomePage };

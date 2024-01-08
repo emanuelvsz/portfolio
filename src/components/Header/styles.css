@@ -1,0 +1,14 @@
+.container {
+  height: 80px;
+  max-width: calc(100vw - 7rem);
+  background-color: red;
+  padding-inline: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+h4 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: large;
+}

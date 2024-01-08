@@ -1,8 +1,0 @@
-.card {
-    height: 200px;
-    width: 500px;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.100);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-  }
