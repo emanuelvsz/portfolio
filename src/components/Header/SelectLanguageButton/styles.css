@@ -1,0 +1,18 @@
+#selectLanguageButton {
+  height: 40px;
+  width: 150px;
+  border-radius: 0;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  gap: 25%;
+}
+
+.countryImage {
+  height: 20px;
+}
+
+p {
+  font-family: 'Poppins';
+  font-weight: 400;
+}
