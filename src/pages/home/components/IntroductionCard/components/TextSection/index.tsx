@@ -9,7 +9,7 @@ const TextSection = () => {
       <div className={styles.phraseSection}>
         <div></div>
         <i>
-          Whats up, homies! Do you need a program, whatever it may be? Contact
+          Whats up, homies! Do you need a software, whatever it may be? Contact
           me and you will have what you need
         </i>
       </div>

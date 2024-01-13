@@ -1,5 +1,6 @@
 import { Header } from '../../components/Header';
 import { IntroductionCard } from './components/IntroductionCard';
+import { MotivationalText } from './components/MotivationalText';
 import './styles.css';
 
 function HomePage() {
@@ -7,6 +8,7 @@ function HomePage() {
     <div className="homePage">
       <Header />
       <IntroductionCard />
+      <MotivationalText />
     </div>
   );
 }

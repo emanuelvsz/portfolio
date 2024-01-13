@@ -1,0 +1,49 @@
+.contactSection {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #000;
+  padding-block: 2.5em;
+  padding-inline: .5rem;
+  cursor: pointer;
+
+  section {
+    height: 100px;
+    width: 100px;
+    background-color: #c71610;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+
+    svg {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      width: 100%;
+      color: #000;
+    }
+
+    p {
+      font-size: small;
+      font-weight: 500;
+      width: 70%;
+      color: #beb7b7;
+    }
+  }
+}
