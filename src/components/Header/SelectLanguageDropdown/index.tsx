@@ -1,5 +1,4 @@
-import React from 'react';
-import { Button, Dropdown, MenuProps } from 'antd';
+import { Dropdown, MenuProps } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
 import { SelectLanguageButton } from '../SelectLanguageButton';
 

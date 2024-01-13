@@ -1,7 +1,8 @@
 .introductionCard {
-  height: 45%;
+  height: 350px;
   width: 100%;
-  background-color: red;
-  padding-inline: 8rem;
+  padding-inline: 10rem;
+  margin-top: 100px;
   display: flex;
+  align-items: center;
 }

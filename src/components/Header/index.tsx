@@ -8,8 +8,8 @@ const Header = () => {
       <div className="items">
         <ul>
           <li>Home</li>
-          <li>About me</li>
-          <li>My Projects</li>
+          <li>About</li>
+          <li>Projects</li>
           <li>Contact</li>
         </ul>
         <SelectLanguageDropdown />
