@@ -1,0 +1,12 @@
+#profileSection {
+  background-color: green;
+}
+
+#profilePicture {
+  border-radius: 50%;
+  height: 80%;
+}
+
+#strawHatPicture {
+  height: 220px;
+}

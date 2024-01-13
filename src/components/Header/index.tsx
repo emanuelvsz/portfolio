@@ -3,15 +3,17 @@ import './styles.css';
 
 const Header = () => {
   return (
-    <div className="container">
+    <div className="header">
       <h4>Emanuel Vilela</h4>
-      <ul>
-        <li>Home</li>
-        <li>About me</li>
-        <li>My Projects</li>
-        <li>Contact</li>
-      </ul>
-      <SelectLanguageDropdown />
+      <div className="items">
+        <ul>
+          <li>Home</li>
+          <li>About me</li>
+          <li>My Projects</li>
+          <li>Contact</li>
+        </ul>
+        <SelectLanguageDropdown />
+      </div>
     </div>
   );
 };

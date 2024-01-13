@@ -1,7 +1,11 @@
-import { Dropdown, MenuProps } from 'antd';
+import React from 'react';
+import { Button, Dropdown, MenuProps } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
+import { SelectLanguageButton } from '../SelectLanguageButton';
 
 const SelectLanguageDropdown = () => {
+  const handleSelect = () => {};
+
   const items: MenuProps['items'] = [
     {
       key: '1',
@@ -28,11 +32,15 @@ const SelectLanguageDropdown = () => {
       ),
       icon: <SmileOutlined />,
       disabled: true,
+      onClick: handleSelect,
     },
   ];
-  return <Dropdown menu={{ items }}>
-    aaaaa
-  </Dropdown>;
+
+  return (
+    <Dropdown menu={{ items }}>
+      <SelectLanguageButton />
+    </Dropdown>
+  );
 };
 
 export { SelectLanguageDropdown };
