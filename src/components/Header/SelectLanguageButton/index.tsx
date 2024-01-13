@@ -3,11 +3,15 @@ import { Button } from 'antd';
 import usaFlag from '../../../assets/countries/usa.png';
 import './styles.css';
 
-const SelectLanguageButton = () => {
+interface SelectLanguageButtonProps {
+  language: string;
+}
+
+const SelectLanguageButton = ({ language }: SelectLanguageButtonProps) => {
   return (
     <Button id="selectLanguageButton">
       <img src={usaFlag} alt="" className="countryImage" />
-      <p>English</p>
+      <p>{language}</p>
     </Button>
   );
 };

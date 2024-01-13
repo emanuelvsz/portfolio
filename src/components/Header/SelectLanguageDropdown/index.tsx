@@ -1,43 +1,54 @@
 import { Dropdown, MenuProps } from 'antd';
-import { SmileOutlined } from '@ant-design/icons';
 import { SelectLanguageButton } from '../SelectLanguageButton';
+import {
+  useChangeLanguage,
+  useLanguages,
+  useSelectedLanguage,
+} from '../../../contexts/i18n/hooks';
+import { useIntl } from 'react-intl';
+import { useCallback, useMemo } from 'react';
+// @ts-ignore
+import styles from './styles.module.scss';
 
 const SelectLanguageDropdown = () => {
-  const handleSelect = () => {};
+  const selectedLanguage = useSelectedLanguage();
+  const changeLanguage = useChangeLanguage();
+  const languages = useLanguages();
+  const intl = useIntl();
 
-  const items: MenuProps['items'] = [
-    {
-      key: '1',
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          1st menu item
-        </a>
-      ),
+  const items: MenuProps['items'] = useMemo(() => {
+    return languages.map((item, index) => {
+      return {
+        label: (
+          <p className={styles.itemLabel}>
+            {intl.messages[`language.${item}`].toString()}
+          </p>
+        ),
+        key: index,
+      };
+    });
+  }, [languages]);
+
+  const handleMenuClick: MenuProps['onClick'] = useCallback(
+    (e: { key: string }) => {
+      changeLanguage(languages[Number(e.key)]);
     },
-    {
-      key: '2',
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.aliyun.com"
-        >
-          2nd menu item (disabled)
-        </a>
-      ),
-      icon: <SmileOutlined />,
-      disabled: true,
-      onClick: handleSelect,
-    },
-  ];
+    [],
+  );
+
+  const menuProps = {
+    items,
+    onClick: handleMenuClick,
+  };
 
   return (
-    <Dropdown menu={{ items }}>
-      <SelectLanguageButton />
+    <Dropdown menu={menuProps}>
+      <div>
+        {/* Use um contêiner (div ou outro componente) */}
+        <SelectLanguageButton
+          language={intl.messages[`language.${selectedLanguage}`].toString()}
+        />
+      </div>
     </Dropdown>
   );
 };
