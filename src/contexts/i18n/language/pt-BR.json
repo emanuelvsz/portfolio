@@ -1,4 +1,15 @@
 {
   "language.en-US": "Inglês",
-  "language.pt-BR": "Português"
+  "language.pt-BR": "Português",
+
+  "header.option.home": "Início",
+  "header.option.about": "Sobre",
+  "header.option.projects": "Projetos",
+  "header.option.contact": "Contato",
+
+  "home.card.profession": "Engenheiro de Software",
+  "home.card.phrase": "E aí, manos! Você precisa de um software, seja ele qual for? Entre em contato comigo e você terá o que precisa",
+  "home.card.contact.title": "Me escreva um email",
+  "home.card.contact.description": "Esse é o melhor jeito pra me contatar",
+  "home.motivational-text": "Você está tão perto de encontrar o que procura"
 }

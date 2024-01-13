@@ -42,9 +42,8 @@ const SelectLanguageDropdown = () => {
   };
 
   return (
-    <Dropdown menu={menuProps}>
+    <Dropdown menu={menuProps} placement="bottom">
       <div>
-        {/* Use um contêiner (div ou outro componente) */}
         <SelectLanguageButton
           language={intl.messages[`language.${selectedLanguage}`].toString()}
         />

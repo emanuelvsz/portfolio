@@ -5,11 +5,14 @@
   border: 1px solid black;
   display: flex;
   align-items: center;
-  gap: 25%;
+  justify-content: center;
+  text-align: center;
+  gap: 7px;
 }
 
 .countryImage {
   height: 20px;
+  margin-bottom: 3px;
 }
 
 p {

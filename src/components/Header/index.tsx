@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import { SelectLanguageDropdown } from './SelectLanguageDropdown';
 import './styles.css';
 
@@ -7,10 +8,10 @@ const Header = () => {
       <h4>Emanuel Vilela</h4>
       <div className="items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <FormattedMessage id="header.option.home" tagName="li" />
+          <FormattedMessage id="header.option.about" tagName="li" />
+          <FormattedMessage id="header.option.projects" tagName="li" />
+          <FormattedMessage id="header.option.contact" tagName="li" />
         </ul>
         <SelectLanguageDropdown />
       </div>

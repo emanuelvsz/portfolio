@@ -1,7 +1,8 @@
+import { MailOutlined } from '@ant-design/icons';
+import { FormattedMessage } from 'react-intl';
+
 // @ts-ignore
 import styles from './styles.module.scss';
-import { MailOutlined } from '@ant-design/icons';
-
 
 const ContactSection = () => {
   return (
@@ -10,8 +11,10 @@ const ContactSection = () => {
         <MailOutlined />
       </section>
       <div>
-        <p className={styles.title}>Write me an email</p>
-        <p>This is the best way to contact me</p>
+        <p className={styles.title}>
+          <FormattedMessage id="home.card.contact.title" />
+        </p>
+        <FormattedMessage id="home.card.contact.description" tagName="p" />
       </div>
     </a>
   );
