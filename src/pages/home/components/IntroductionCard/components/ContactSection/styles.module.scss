@@ -1,13 +1,14 @@
 .contactSection {
-  margin-left: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px dashed #000;
-  padding-block: 2.5em;
-  padding-inline: 0.5rem;
   cursor: pointer;
+  height: 100%;
+  width: 100%;
+
+  padding-inline: 1rem;
 
   &:hover {
     border: 1px solid #000;

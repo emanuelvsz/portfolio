@@ -1,4 +1,4 @@
-import { ContactSection } from './components/ContactSection';
+import { ContactSwitcher } from './components/ContactSwitcher';
 import { ProfileSection } from './components/ProfileSection';
 import { SocialMediaSection } from './components/SocialMediaSection';
 import { TextSection } from './components/TextSection';
@@ -10,7 +10,7 @@ const IntroductionCard = () => {
       <ProfileSection />
       <TextSection />
       <SocialMediaSection />
-      <ContactSection />
+      <ContactSwitcher />
     </div>
   );
 };

@@ -4,9 +4,13 @@ import { FormattedMessage } from 'react-intl';
 // @ts-ignore
 import styles from './styles.module.scss';
 
-const ContactSection = () => {
+interface ContactSectionProps {
+  className?: string;
+}
+
+const ContactSection = ({ className }: ContactSectionProps) => {
   return (
-    <a className={styles.contactSection}>
+    <a className={`${styles.contactSection} ${className}`}>
       <section>
         <MailOutlined />
       </section>
