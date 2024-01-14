@@ -4,8 +4,10 @@ import usaFlag from '../../../assets/countries/usa.png';
 // @ts-ignore
 import brazilFlag from '../../../assets/countries/brazil.png';
 
-import './styles.css';
 import { useSelectedLanguage } from '../../../contexts/i18n/hooks';
+
+// @ts-ignore
+import styles from './styles.module.scss';
 
 interface SelectLanguageButtonProps {
   language: string;
@@ -20,11 +22,10 @@ const SelectLanguageButton = ({ language }: SelectLanguageButtonProps) => {
   };
 
   return (
-    <Button id="selectLanguageButton">
+    <Button className={styles.container}>
       <img
         src={selectLanguageIcon(selectedLanguage)}
-        alt=""
-        className="countryImage"
+        className={styles.countryImage}
       />
       <p>{language}</p>
     </Button>

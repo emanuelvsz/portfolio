@@ -24,6 +24,10 @@
       .textSection {
         width: auto;
       }
+
+      @media (max-width: 569px) {
+        flex-direction: column;
+      }
     }
 
     .socialMediaSection {
@@ -40,6 +44,51 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .professionalContainer {
+        .profileSection {
+          img {
+            width: calc(260px / 1.7) !important;
+            height: calc(260px / 1.7) !important;
+            margin: 0;
+          }
+
+          div {
+            top: -72px !important;
+            left: -20px;
+          }
+
+          button {
+            top: 95px;
+            right: -5px;
+            height: 30px;
+            width: 30px;
+
+            svg {
+              font-size: 15px;
+            }
+          }
+
+          @media (max-width: 569px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+              left: 30px;
+            }
+
+            button {
+              top: 95px;
+              right: 50px;
+              height: 30px;
+              width: 30px;
+            }
+          }
+        }
       }
     }
   }

@@ -16,4 +16,16 @@
   svg {
     font-size: 2rem;
   }
+
+  @media (max-width: 800px) {
+    padding-inline: 30px;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    svg {
+      font-size: 1.5rem;
+    }
+  }
 }

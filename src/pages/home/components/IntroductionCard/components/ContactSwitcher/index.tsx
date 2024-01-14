@@ -1,4 +1,4 @@
-import { ContactSection } from '../ContactSection';
+import { ContactSection } from './components/ContactSection';
 
 // @ts-ignore
 import styles from './styles.module.scss';
