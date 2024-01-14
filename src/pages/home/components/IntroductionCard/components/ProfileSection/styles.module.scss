@@ -1,0 +1,43 @@
+.container {
+    width: 260px;
+    position: relative;
+    overflow: visible;
+  
+    .profilePicture {
+      border-radius: 50%;
+      width: 260px;
+      height: 260px;
+    }
+  
+    .imageContainer {
+      position: absolute;
+      left: -10px;
+      top: -100px;
+      rotate: -16deg;
+  
+      .strawHatPicture {
+        height: 220px;
+      }
+    }
+  
+    .iconContainer {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      background-color: #fff;
+      padding: 8px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 35px;
+      right: 10px;
+      border: 0px;
+      box-shadow: 0 0 4px 1px #cfcfcf;
+  
+      .reloadIcon {
+        font-size: 25px;
+      }
+    }
+  }
+  

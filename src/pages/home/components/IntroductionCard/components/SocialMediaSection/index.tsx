@@ -6,9 +6,13 @@ import {
 // @ts-ignore
 import styles from './styles.module.scss';
 
-const SocialMediaSection = () => {
+interface SocialMediaSectionProps {
+  className?: string;
+}
+
+const SocialMediaSection = ({ className }: SocialMediaSectionProps) => {
   return (
-    <section className={styles.socialMediaSection}>
+    <section className={`${styles.container} ${className}`}>
       <a href="https://instagram.com/emanuelvsz" target="_blank">
         <InstagramOutlined />
       </a>

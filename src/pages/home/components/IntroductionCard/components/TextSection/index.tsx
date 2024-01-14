@@ -3,9 +3,13 @@ import { FormattedMessage } from 'react-intl';
 // @ts-ignore
 import styles from './styles.module.scss';
 
-const TextSection = () => {
+interface TextSectionProps {
+  className?: string;
+}
+
+const TextSection = ({ className }: TextSectionProps) => {
   return (
-    <section className={styles.textSection}>
+    <section className={`${styles.container} ${className}`}>
       <p className={styles.title}>
         <FormattedMessage id="home.card.profession" />
       </p>

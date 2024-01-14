@@ -3,9 +3,13 @@ import { ContactSection } from '../ContactSection';
 // @ts-ignore
 import styles from './styles.module.scss';
 
-const ContactSwitcher = () => {
+interface ContactSwitcherProps {
+  className?: string;
+}
+
+const ContactSwitcher = ({ className }: ContactSwitcherProps) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <ContactSection className={styles.contactSection} />
     </div>
   );

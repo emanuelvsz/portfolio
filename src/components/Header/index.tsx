@@ -1,12 +1,14 @@
-import { FormattedMessage } from 'react-intl';
 import { SelectLanguageDropdown } from './SelectLanguageDropdown';
-import './styles.css';
+// @ts-ignore
+import styles from './styles.module.scss';
+
+import { FormattedMessage } from 'react-intl';
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className={styles.header}>
       <h4>Emanuel Vilela</h4>
-      <div className="items">
+      <div className={styles.items}>
         <ul>
           <FormattedMessage id="header.option.home" tagName="li" />
           <FormattedMessage id="header.option.about" tagName="li" />

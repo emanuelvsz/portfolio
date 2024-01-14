@@ -1,0 +1,35 @@
+.header {
+  height: 80px;
+  width: 100%;
+  padding-inline: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h4 {
+    font-weight: 600;
+    font-size: larger;
+  }
+
+  .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    ul {
+      text-decoration: none;
+      list-style: none;
+      display: flex;
+      gap: 32px;
+
+      ul li {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (min-width: 1748px) {
+    padding-inline: 24%;
+  }
+}

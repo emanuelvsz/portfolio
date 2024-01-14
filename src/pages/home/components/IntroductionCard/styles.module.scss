@@ -1,0 +1,32 @@
+.container {
+  min-height: 350px;
+  width: 100%;
+  padding-inline: 11rem;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  .mainContent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: visible;
+    gap: 3.5rem;
+
+    .textSection {
+      width: auto;
+    }
+
+    .socialMediaSection {
+      width: 10%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1748px) {
+    width: 80%;
+  }
+}

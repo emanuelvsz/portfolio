@@ -10,7 +10,7 @@ interface ContactSectionProps {
 
 const ContactSection = ({ className }: ContactSectionProps) => {
   return (
-    <a className={`${styles.contactSection} ${className}`}>
+    <a className={`${styles.container} ${className}`}>
       <section>
         <MailOutlined />
       </section>
