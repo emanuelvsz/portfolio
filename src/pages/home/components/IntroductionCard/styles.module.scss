@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+  overflow: visible;
 
   .mainContent {
     display: flex;
@@ -15,8 +16,14 @@
     overflow: visible;
     gap: 3.5rem;
 
-    .textSection {
-      width: auto;
+    .professionalContainer {
+      display: flex;
+      gap: 3.5rem;
+      overflow: visible;
+
+      .textSection {
+        width: auto;
+      }
     }
 
     .socialMediaSection {
@@ -24,9 +31,34 @@
       display: flex;
       align-items: center;
     }
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+
+      .socialMediaSection {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+    }
+  }
+
+  @media (max-width: 1130px) {
+    padding-inline: 4rem;
   }
 
   @media (min-width: 1748px) {
     width: 80%;
+  }
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    gap: 3rem;
+
+    .contactSwitcher {
+      width: 60%;
+      height: 230px;
+    }
   }
 }

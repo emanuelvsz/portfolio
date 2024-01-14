@@ -9,8 +9,10 @@ const IntroductionCard = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainContent}>
-        <ProfileSection className={styles.profileSection} />
-        <TextSection className={styles.textSection} />
+        <div className={styles.professionalContainer}>
+          <ProfileSection className={styles.profileSection} />
+          <TextSection className={styles.textSection} />
+        </div>
         <SocialMediaSection className={styles.socialMediaSection} />
       </div>
       <ContactSwitcher className={styles.contactSwitcher} />
