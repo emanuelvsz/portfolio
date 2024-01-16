@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react';
-import { SelectLanguageDropdown } from './SelectLanguageDropdown';
 // @ts-ignore
 import styles from './styles.module.scss';
-
-import { FormattedMessage } from 'react-intl';
 import { DrawerMenu } from './DrawerMenu';
 import { HeaderItems } from './HeaderItems';
+
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
