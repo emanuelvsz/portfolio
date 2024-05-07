@@ -34,7 +34,7 @@ const DrawerMenu = () => {
         width={200}
         height={132}
       >
-        <Flex className={styles.drawerContent} justify='center' align='center'>
+        <Flex className={styles.drawerContent} justify="center" align="center">
           <HeaderItems />
         </Flex>
       </Drawer>

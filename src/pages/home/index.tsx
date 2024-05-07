@@ -8,12 +8,9 @@ function HomePage() {
   return (
     <div className={styles.container}>
       <Header />
-      <Flex align='center' justify='space-between' className={styles.content}>
+      <Flex justify="space-between" className={styles.landing}>
         <LandingContainer />
-        <Space className={styles.sun}>
-          <img src="src/assets/logo/only_sun.svg" alt="" className={styles.sunIcon}/>
-          <img src="src/assets/logo/only_clouds.svg" alt="" className={styles.cloudIcon}/>
-        </Space>
+        <div className={styles.sun}></div>
       </Flex>
     </div>
   );

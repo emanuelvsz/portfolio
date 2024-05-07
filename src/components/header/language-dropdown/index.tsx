@@ -21,11 +21,12 @@ const LanguageDropdown = () => {
 
   const items: MenuProps['items'] = useMemo(() => {
     return languages.map((item, index) => {
-      console.log("Language: ", intl.messages[`language.${item.toLowerCase()}`].toString())
+      console.log(
+        'Language: ',
+        intl.messages[`language.${item.toLowerCase()}`].toString(),
+      );
       return {
-        label: (
-          <FormattedMessage id={`language.${item.toLowerCase()}`} />
-        ),
+        label: <FormattedMessage id={`language.${item.toLowerCase()}`} />,
         key: index,
       };
     });
@@ -47,7 +48,6 @@ const LanguageDropdown = () => {
     items,
     onClick: handleMenuClick,
   };
-  
 
   return (
     <Dropdown menu={menuProps} placement="bottom">
@@ -56,9 +56,10 @@ const LanguageDropdown = () => {
           src={selectLanguageIcon(selectedLanguage)}
           className={styles.countryImage}
         />
-        <Typography.Text>
-          <FormattedMessage id={`language.${selectedLanguage.toLowerCase()}`} />
-        </Typography.Text>
+        <FormattedMessage
+          id={`language.${selectedLanguage.toLowerCase()}`}
+          tagName="p"
+        />
       </Button>
     </Dropdown>
   );

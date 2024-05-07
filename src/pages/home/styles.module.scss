@@ -1,49 +1,37 @@
-$cor-1: #2E3047;
-$cor-2: #35374C;
+$cor-1: #2e3047;
+$cor-2: #35374c;
 
 .container {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background: 
-    linear-gradient(160deg, $cor-2 40%, $cor-1 50%), /* Gradiente linear da cor mais escura para a mais clara com transição mais forte */
-    $cor-1 45%;
+  background:
+    linear-gradient(160deg, $cor-2 40%, $cor-1 50%),
+      $cor-1 45%;
 
-  .content {
+  .landing {
     width: 100%;
-    height: max-content;
-    // background-color: purple;
+    height: calc(100vh - 100px);
+    padding-inline: 125px;
+    padding-top: 10rem;
 
     .sun {
-      position: relative;
-      display: inline;
-
-      .sunIcon {
-        height: 33rem;
-        z-index: 1;
-      }
-  
-      .cloudIcon {
-        height: 15rem;
-        z-index: 2;
-        position: absolute;
-        top: 240px;
-        right: -5px;
-        overflow: hidden;
-        animation: float 3s ease-in-out infinite;
-      }
+      width: 275px;
+      height: 275px;
+      background-color: #D5B140;  
     }
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(-10px);
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      padding-inline: 50px;
+      justify-content: left;
+      padding-top: 2rem;
+
+      .sun {
+        display: none;
       }
-      50% {
-        transform: translateY(-30px);
-      }
-  }
+    }
   }
 }
