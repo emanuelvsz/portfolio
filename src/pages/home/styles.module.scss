@@ -1,7 +1,49 @@
+$cor-1: #2E3047;
+$cor-2: #35374C;
+
 .container {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+
+  background: 
+    linear-gradient(160deg, $cor-2 40%, $cor-1 50%), /* Gradiente linear da cor mais escura para a mais clara com transição mais forte */
+    $cor-1 45%;
+
+  .content {
+    width: 100%;
+    height: max-content;
+    // background-color: purple;
+
+    .sun {
+      position: relative;
+      display: inline;
+
+      .sunIcon {
+        height: 33rem;
+        z-index: 1;
+      }
+  
+      .cloudIcon {
+        height: 15rem;
+        z-index: 2;
+        position: absolute;
+        top: 240px;
+        right: -5px;
+        overflow: hidden;
+        animation: float 3s ease-in-out infinite;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+  }
+  }
 }

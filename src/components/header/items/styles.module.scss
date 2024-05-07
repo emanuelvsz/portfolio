@@ -1,17 +1,14 @@
 .items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-
   ul {
     text-decoration: none;
     list-style: none;
     display: flex;
     gap: 32px;
 
-    ul li {
+    li {
       cursor: pointer;
+      color: #fff;
+      font-size: 14px;
     }
   }
 }

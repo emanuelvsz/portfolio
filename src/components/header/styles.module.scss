@@ -1,19 +1,19 @@
 .header {
-  height: 80px;
+  height: 100px;
   width: 100%;
-  padding-inline: 8rem;
+  padding-inline: 125px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
 
   h4 {
     font-weight: 600;
     font-size: larger;
+    color: #fff;
   }
 
-  @media (min-width: 1748px) {
-    padding-inline: 24%;
-  }
+
   @media (max-width: 848px) {
     padding-inline: 50px;
   }

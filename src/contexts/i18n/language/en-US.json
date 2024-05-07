@@ -1,15 +1,11 @@
 {
-  "language.en-US": "English",
-  "language.pt-BR": "Portuguese - BR",
+  "language.en-us": "English",
+  "language.pt-br": "Portuguese - BR",
 
   "header.option.home": "Home",
-  "header.option.about": "About",
-  "header.option.projects": "Projects",
-  "header.option.contact": "Contact",
+  "header.option.participations": "Participations",
+  "header.option.formation": "Formation",
 
-  "home.card.profession": "Software Engineer",
-  "home.card.phrase": "Whats up, homies! Do you need a software, whatever it may be? Contact me and you will have what you need",
-  "home.card.contact.title": "Write me an email",
-  "home.card.contact.description": "This is the best way to contact me",
-  "home.motivational-text": "You are so close to finding what you are looking for"
+  "home.profession": "SOFTWARE ENGINEER",
+  "home.description": "Always improving myself"
 }

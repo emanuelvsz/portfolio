@@ -1,0 +1,34 @@
+.container {
+    padding-inline: 125px;
+    height: max-content;
+
+    .title, .profission, p {
+        margin: 0; 
+    }
+
+    .title {
+        font-size: 2.3rem;
+        color: transparent;
+        -webkit-text-stroke: 1px #FFFFFF;
+        line-height: 1.5;
+    }
+    
+    .profission {
+        color: #FFFFFF;
+        font-size: 3.3rem;
+        -webkit-text-stroke: 0;
+        line-height: 1;
+        overflow: hidden;
+        letter-spacing: -2px;
+    }
+
+    p {
+        color: #FFFFFF;
+        font-weight: 600;
+        line-height: 2.5;
+    }
+
+    img {
+        z-index: 999;
+    }
+}

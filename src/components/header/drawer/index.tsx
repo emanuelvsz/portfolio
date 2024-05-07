@@ -1,13 +1,14 @@
-import { Button, Drawer } from 'antd';
+import { Button, Drawer, Flex, Space } from 'antd';
 
 // @ts-ignore
 import styles from './styles.module.scss';
-import { useState } from 'react';
+import { HeaderItems } from '../items';
+
 import { MenuOutlined } from '@ant-design/icons';
-import { DrawerContent } from './components/DrawerContent';
+import { useState } from 'react';
 
 const DrawerMenu = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const showDrawer = () => {
     setOpen(true);
@@ -16,8 +17,9 @@ const DrawerMenu = () => {
   const onClose = () => {
     setOpen(false);
   };
+
   return (
-    <div className={styles.container}>
+    <Space className={styles.container}>
       <Button
         type="primary"
         onClick={showDrawer}
@@ -32,9 +34,11 @@ const DrawerMenu = () => {
         width={200}
         height={132}
       >
-        <DrawerContent />
+        <Flex className={styles.drawerContent} justify='center' align='center'>
+          <HeaderItems />
+        </Flex>
       </Drawer>
-    </div>
+    </Space>
   );
 };
 

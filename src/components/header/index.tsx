@@ -1,7 +1,7 @@
 // @ts-ignore
 import styles from './styles.module.scss';
-import { DrawerMenu } from './DrawerMenu';
-import { HeaderItems } from './HeaderItems';
+import { DrawerMenu } from './drawer';
+import { HeaderItems } from './items';
 
 import { useEffect, useState } from 'react';
 
