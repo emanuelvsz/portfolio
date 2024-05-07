@@ -13,9 +13,10 @@ $cor-2: #35374c;
 
   .landing {
     width: 100%;
-    height: calc(100vh - 100px);
+    min-height: 100vh;
     padding-inline: 125px;
     padding-top: 10rem;
+    position: relative;
 
     .sun {
       width: 275px;
@@ -33,5 +34,12 @@ $cor-2: #35374c;
         display: none;
       }
     }
+  }
+
+  .about {
+    background-color: #2D2F46;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
   }
 }

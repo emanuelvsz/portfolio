@@ -5,6 +5,8 @@ import styles from './styles.module.scss';
 import { Flex } from 'antd';
 import { Typewriter } from 'react-simple-typewriter';
 
+export const toPixels = (n: number) => `${Math.floor(n)}px`;
+
 const LandingContainer = () => {
   const intl = useIntl();
 
@@ -14,7 +16,7 @@ const LandingContainer = () => {
       align="left"
       justify="space-between"
       vertical
-      gap={40}
+      gap={80}
     >
       <Flex vertical>
         <h1 className={styles.title}>EMANUEL VILELA</h1>
