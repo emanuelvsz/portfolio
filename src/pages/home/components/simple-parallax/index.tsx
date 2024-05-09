@@ -29,6 +29,7 @@ const SimpleParallax = ({ children }: PropsWithChildren<{}>) => {
       });
     }
   }, []);
+  
   return (
     <div className={styles.simpleParallax} ref={ref}>
       {children}

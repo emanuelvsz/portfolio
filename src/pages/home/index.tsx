@@ -3,7 +3,7 @@ import { Header } from '../../components/header';
 import { LandingContainer } from './components/landing-container';
 // @ts-ignore
 import styles from './styles.module.scss';
-import { SimpleParallax } from './components/landing-container/simple-parallax';
+import { SimpleParallax } from './components/simple-parallax';
 
 function HomePage() {
   return (
