@@ -17,6 +17,7 @@
     "react": "^18.3.0-next-fecc288b7-20221025",
     "react-dom": "^18.3.0-next-fecc288b7-20221025",
     "react-intl": "^6.5.5",
+    "react-plx": "^2.1.2",
     "react-scroll-parallax": "^3.4.5",
     "react-simple-typewriter": "^5.0.1",
     "use-context-selector": "^1.4.1"

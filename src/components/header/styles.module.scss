@@ -1,4 +1,6 @@
 .header {
+  position: sticky;
+  top: 0;
   height: 100px;
   width: 100%;
   padding-inline: 125px;
@@ -6,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
+
 
   h4 {
     font-weight: 600;

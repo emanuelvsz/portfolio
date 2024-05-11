@@ -19,10 +19,10 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <h4>Emanuel Vilela</h4>
       {screenSize > 940 ? <HeaderItems /> : <DrawerMenu />}
-    </div>
+    </header>
   );
 };
 

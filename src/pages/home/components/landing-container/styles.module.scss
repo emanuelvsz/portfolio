@@ -1,11 +1,11 @@
 .container {
   height: max-content;
 
-
   .title,
   .profission,
   p {
     margin: 0;
+    z-index: 999;
   }
 
   .title {
@@ -36,6 +36,8 @@
       cursor: pointer;
     }
   }
+
+  
 
   @media (max-width: 1200px) {
     width: 100%;
