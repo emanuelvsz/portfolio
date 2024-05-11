@@ -13,7 +13,7 @@ $cor-2: #35374c;
 
   .landing {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px - 200px);
     padding-inline: 125px;
     padding-top: 10rem;
     position: relative;
@@ -22,7 +22,19 @@ $cor-2: #35374c;
       width: 300px;
       height: 300px;
       background-color: transparent;
-      border: 1px solid #fff;  
+      animation: shadowAnimation 5s infinite alternate;
+    }
+
+    @keyframes shadowAnimation {
+      0% {
+        box-shadow: 0;
+      }
+      30% {
+        box-shadow: 0px 0px 60px 0px #DAD2B9;
+      }
+      100% {
+        box-shadow: 0px 0px 90px 0px #d4ae2e;
+      }
     }
 
     @media (max-width: 1200px) {
@@ -37,10 +49,8 @@ $cor-2: #35374c;
     }
   }
 
-  .about {
-    background-color: #2D2F46;
+  .lines {
     width: 100%;
-    min-height: 100vh;
-    position: relative;
+    height: 200px;
   }
 }
