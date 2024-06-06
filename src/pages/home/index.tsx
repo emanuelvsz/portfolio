@@ -1,12 +1,12 @@
 import { Flex } from 'antd';
 import { Header } from '../../components/header';
-import { LandingContainer } from './components/landing-container';
+import { LandingContainer } from './components/landing';
 // @ts-ignore
 import styles from './styles.module.scss';
 import { useEffect, useState } from 'react';
 import Plx from 'react-plx';
 
-function HomePage() {
+function Home() {
   const starPath = 'src/assets/star.svg';
   const START_COUNT = 50;
 
@@ -27,7 +27,7 @@ function HomePage() {
       top: 0,
       left: 0,
       width: '100vw',
-      height: `${pageHeight}px`, // Ajusta a altura do container para a altura da página
+      height: `${pageHeight}px`,
       overflow: 'hidden',
     };
     for (let i = 0; i < START_COUNT; i++) {
@@ -36,7 +36,7 @@ function HomePage() {
         position: 'absolute',
         zIndex: 0,
         left: `${Math.random() * 100}vw`,
-        top: `${Math.random() * pageHeight}px`, // Ajusta a posição vertical para cobrir toda a altura da página
+        top: `${Math.random() * pageHeight}px`,
         width: `${size}rem`,
         height: `${size}rem`,
       };
@@ -59,47 +59,27 @@ function HomePage() {
     },
   ];
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = (e: any) => {
+    const { scrollTop, scrollHeight, clientHeight } = e.target;
+    const position = Math.ceil(
+      (scrollTop / (scrollHeight - clientHeight)) * 100,
+    );
+    setScrollPosition(position);
+    console.log(scrollPosition);
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onScroll={handleScroll}>
       <StarBackground />
       <Header />
       <Flex justify="space-between" className={styles.landing}>
-        <Plx parallaxData={parallaxData}>
-          <LandingContainer />
-        </Plx>
-        <Plx parallaxData={parallaxData} className={styles.moon}>
-        </Plx>
+        <LandingContainer />
+        <Plx parallaxData={parallaxData} className={styles.moon}></Plx>
       </Flex>
-      <Flex className={styles.about}>div</Flex>
     </div>
   );
 }
 
-export { HomePage };
-
-{
-  /* <Flex className={styles.linesContainer} vertical>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className={styles.coloredLines}
-        >
-          <path
-            fill="#2E3047"
-            fill-opacity="1"
-            d="M0,160L360,224L720,64L1080,128L1440,128L1440,320L1080,320L720,320L360,320L0,320Z"
-          ></path>
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className={styles.whiteLines}
-        >
-          <path
-            fill="#ffffff"
-            fill-opacity="1"
-            d="M0,160L360,224L720,64L1080,128L1440,128L1440,320L1080,320L720,320L360,320L0,320Z"
-          ></path>
-        </svg>
-      </Flex> */
-}
+export { Home };

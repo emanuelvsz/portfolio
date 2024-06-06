@@ -6,6 +6,7 @@
   p {
     margin: 0;
     z-index: 999;
+    overflow: hidden;
   }
 
   .title {
@@ -13,7 +14,9 @@
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
     line-height: 1.5;
+    overflow: hidden;
   }
+
 
   .profission {
     color: #ffffff;

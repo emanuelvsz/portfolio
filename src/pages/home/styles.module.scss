@@ -1,5 +1,6 @@
 $cor-1: #2E3047;
 $cor-2: #35374c;
+$page-padding: 125px;
 
 .container {
   width: 100%;
@@ -14,11 +15,11 @@ $cor-2: #35374c;
   
   .landing {
     width: 100%;
-    padding-inline: 125px;
-    padding-top: 8rem;
+    padding-inline: $page-padding;
+    padding-top: 12rem;
     position: relative;
     z-index: 999;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
 
     .moon {
       width: 120px;
@@ -52,12 +53,5 @@ $cor-2: #35374c;
         display: none;
       }
     }
-  }
-
-  .about {
-    height: 100vh;  
-    width: 100%;
-    background-color: #35374c;
-    z-index: 9999;
   }
 }

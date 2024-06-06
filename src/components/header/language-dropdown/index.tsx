@@ -1,4 +1,4 @@
-import { Button, Dropdown, MenuProps, Typography } from 'antd';
+import { Button, Dropdown, MenuProps } from 'antd';
 import {
   useChangeLanguage,
   useLanguages,
@@ -50,7 +50,7 @@ const LanguageDropdown = () => {
   };
 
   return (
-    <Dropdown menu={menuProps} placement="bottom">
+    <Dropdown menu={menuProps} placement="bottom" >
       <Button className={styles.languageButton}>
         <img
           src={selectLanguageIcon(selectedLanguage)}
