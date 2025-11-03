@@ -1,30 +1,49 @@
+/** @jsxImportSource @emotion/react */
 import { Button, Dropdown, MenuProps } from 'antd';
 import {
   useChangeLanguage,
   useLanguages,
   useSelectedLanguage,
-} from '../../../contexts/i18n/hooks';
-import { FormattedMessage, useIntl } from 'react-intl';
+} from '@contexts/i18n/hooks';
+import { FormattedMessage } from 'react-intl';
 import { useCallback, useMemo } from 'react';
-// @ts-ignore
-import styles from './styles.module.scss';
-// @ts-ignore
-import usaFlag from '../../../assets/countries/usa.png';
-// @ts-ignore
-import brazilFlag from '../../../assets/countries/brazil.png';
+
+import usaFlag from '@assets/countries/usa.png';
+import brazilFlag from '@assets/countries/brazil.png';
+import { css } from '@emotion/react';
+
+const styles = {
+  languageButton: css`
+    height: 40px;
+    width: fit-content;
+    border-radius: 0;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    background-color: transparent;
+    gap: 7px;
+    position: sticky;
+
+      p {
+      font-family: 'Poppins';
+      font-weight: 400;
+      color: #fff;
+    }
+  `,
+  countryImage: css `
+    height: 20px;
+  `
+}
 
 const LanguageDropdown = () => {
   const selectedLanguage = useSelectedLanguage();
   const changeLanguage = useChangeLanguage();
   const languages = useLanguages();
-  const intl = useIntl();
 
   const items: MenuProps['items'] = useMemo(() => {
     return languages.map((item, index) => {
-      console.log(
-        'Language: ',
-        intl.messages[`language.${item.toLowerCase()}`].toString(),
-      );
       return {
         label: <FormattedMessage id={`language.${item.toLowerCase()}`} />,
         key: index,
@@ -36,7 +55,7 @@ const LanguageDropdown = () => {
     (e: { key: string }) => {
       changeLanguage(languages[Number(e.key)]);
     },
-    [],
+    [languages, changeLanguage],
   );
 
   const selectLanguageIcon = (language: string) => {
@@ -51,10 +70,10 @@ const LanguageDropdown = () => {
 
   return (
     <Dropdown menu={menuProps} placement="bottom" >
-      <Button className={styles.languageButton}>
+      <Button css={styles.languageButton}>
         <img
           src={selectLanguageIcon(selectedLanguage)}
-          className={styles.countryImage}
+          css={styles.countryImage}
         />
         <FormattedMessage
           id={`language.${selectedLanguage.toLowerCase()}`}

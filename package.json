@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@react-spring/parallax": "^9.7.3",
     "@react-spring/web": "^9.7.3",
     "antd": "^5.12.8",

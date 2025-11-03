@@ -2,20 +2,15 @@ import React from 'react';
 import { Home } from './pages/home';
 import I18nProvider from './contexts/i18n/Provider';
 import { ConfigProvider } from 'antd';
-import { About } from './pages/home/components/about';
+import { theme } from '@config/theme';
 
 const App: React.FC = () => {
-  const customTheme = {
-    components: {
-      Dropdown: { algorithm: true, borderRadius: 0 },
-    },
-  };
+
   return (
     <React.StrictMode>
-      <ConfigProvider theme={customTheme}>
+      <ConfigProvider theme={theme(true)}>
         <I18nProvider>
           <Home />
-          <About />
         </I18nProvider>
       </ConfigProvider>
     </React.StrictMode>
