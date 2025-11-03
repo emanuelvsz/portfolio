@@ -189,7 +189,7 @@ const styles = {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 16px;
   ` 
 };
 
