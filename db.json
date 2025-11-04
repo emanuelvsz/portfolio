@@ -1,0 +1,12 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Emanuel Villla",
+      "email": "emanuelvilela.dev@gmail.com",
+      "zipCode": "57303803",
+      "password": "Emanuel123@2025",
+      "phoneNumber": "+55 82 99695-5454"
+    }
+  ]
+}

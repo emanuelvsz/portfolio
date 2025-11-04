@@ -108,8 +108,8 @@ const styles = {
     justify-content: center;
   `,
   imageContainer: css`
-    height: 250px;
-    width: 260px;
+    height: 300px;
+    width: 310px;
     background-color: white !important;
     border-radius: ${THEME_BORDER_RADIUS.GENERAL}px;
     overflow: hidden;
@@ -182,7 +182,7 @@ const styles = {
     background-color: ${THEME_COLORS.WHITE_COLOR} !important;
     color: ${THEME_COLORS.PRIMARY_COLOR} !important;
     overflow: hidden;
-    width: 100%;
+    width: 230px;
     font-size: 22px;
     height: 50px !important;
 
@@ -190,6 +190,7 @@ const styles = {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    margin-top: 16px;
   ` 
 };
 
@@ -244,8 +245,11 @@ const LandingTransparentCard = () => {
               }
             />
           </Flex>
-        </Flex>
-        
+          <Button type='primary' css={styles.cardButton} >
+            Get in touch
+            <img src={cursorFingerIcon} height={22}/>
+          </Button>
+        </Flex>        
         <Flex css={styles.rightBlock} vertical gap={16}>
             <div css={styles.imageContainer}>
                 <img src={meImg} alt="Emanuel Vilela" css={styles.profileImage} />
@@ -258,10 +262,6 @@ const LandingTransparentCard = () => {
                     <span css={styles.downloadText}>Download CV</span>
                 </div>
             </div>
-            <Button type='primary' css={styles.cardButton} >
-                Get in touch
-                <img src={cursorFingerIcon} height={22}/>
-            </Button>
         </Flex>
     </Card>
   );
