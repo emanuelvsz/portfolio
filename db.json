@@ -2,11 +2,31 @@
   "user": [
     {
       "id": 1,
-      "name": "Emanuel Villla",
+      "name": "Emanuel Vilela",
       "email": "emanuelvilela.dev@gmail.com",
       "zipCode": "57303803",
       "password": "Emanuel123@2025",
       "phoneNumber": "+55 82 99695-5454"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Rented Properties Management",
+      "description": "System to manage properties that’s rented, it payments, it expenses, dashboard of expenses, returns, money earned and a system that collects inventory of a property using AI image analysis.",
+      "tags": ["BACKEND", "WEB"]
+    },
+    {
+      "id": 2,
+      "title": "Pauli.AI AI Chat Bot",
+      "description": "AI Chat Bot using LLM’s and LLM Routing tools. Developed to help real estates investors to: find his best opportunities, evaluate a refourbish cost and earnings, know if a neighborhood is dangeours or not when buying a property.",
+      "tags": ["BACKEND", "WEB", "MOBILE"]
+    },
+    {
+      "id": 3,
+      "title": "Pauli.AI Mobile Liquidity",
+      "description": "Transforms your vehicle into instant liquidity — without stopping your mobility. We buy your car, insure and maintain it, and you decide whether to keep driving or let it generate value. Quick, transparent, and fully flexible. Move freely, keep control, and unlock your car’s true potential.",
+      "tags": ["BACKEND", "WEB"]
     }
   ]
 }
