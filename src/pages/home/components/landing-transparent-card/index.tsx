@@ -108,8 +108,8 @@ const styles = {
     justify-content: center;
   `,
   imageContainer: css`
-    height: 300px;
-    width: 310px;
+    height: 330px;
+    width: 340px;
     background-color: white !important;
     border-radius: ${THEME_BORDER_RADIUS.GENERAL}px;
     overflow: hidden;

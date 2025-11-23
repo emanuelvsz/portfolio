@@ -3,13 +3,15 @@ import { css } from '@emotion/react';
 import { Button, Flex } from 'antd';
 import { Header } from '../../components/header';
 import LandingTransparentCard from './components/landing-transparent-card';
-import { THEME_BORDER_RADIUS, THEME_COLORS } from '@config/theme';
+import {
+  THEME_BORDER_RADIUS,
+  THEME_COLORS,
+  THEME_PADDINGS,
+} from '@config/theme';
 
 import briefcaseIcon from '@assets/icons/fi-rs-briefcase.svg';
 import StackCardList from './components/stack-card-list';
 import ScrollToSeeContainer from './components/scroll-to-see-container';
-
-const pagePadding = '150px';
 
 const styles = {
   container: css`
@@ -18,8 +20,8 @@ const styles = {
     background-color: #2f2b39;
   `,
   content: css`
-    width: 100%;
-    padding-inline: ${pagePadding};
+    width: 100vw;
+    padding-inline: ${THEME_PADDINGS.PAGE_PADDING}px;
   `,
   mainLanguagesTitle: css`
     font-size: 22px;
@@ -82,7 +84,6 @@ function Home() {
       <Flex justify="space-between" css={styles.content} vertical gap={16}>
         <LandingTransparentCard />
         <StackCardList />
-
         <Flex vertical justify="center" align="center" gap={16}>
           <p css={styles.projectsTitle}>
             You can filter projects based on the <br />

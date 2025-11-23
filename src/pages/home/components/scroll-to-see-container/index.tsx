@@ -49,6 +49,7 @@ const ScrollToSeeContainer = () => {
             display: 'flex',
             flexDirection: 'column',
             gap: 16,
+            fontWeight: 'bold',
           }}
         >
           scroll(); // There is still more to see

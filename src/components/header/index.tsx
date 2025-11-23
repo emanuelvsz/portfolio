@@ -42,7 +42,7 @@ const styles = {
   `,
   container: css`
     padding-block: 25px;
-    padding-inline: ${THEME_PADDINGS.PAGE_PADDING};
+    padding-inline: ${THEME_PADDINGS.PAGE_PADDING}px;
     z-index: 9999;
   `
 };
