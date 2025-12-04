@@ -12,6 +12,7 @@ import {
 import briefcaseIcon from '@assets/icons/fi-rs-briefcase.svg';
 import StackCardList from './components/stack-card-list';
 import ScrollToSeeContainer from './components/scroll-to-see-container';
+import ProjectShowcaseList from './components/project-showcase-list';
 
 const styles = {
   container: css`
@@ -96,6 +97,7 @@ function Home() {
         </Flex>
       </Flex>
       <ScrollToSeeContainer />
+      <ProjectShowcaseList />
     </Flex>
   );
 }

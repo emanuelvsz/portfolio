@@ -6,7 +6,7 @@ const ScrollToSeeContainer = () => {
   return (
     <Flex
       style={{
-        height: '100vh',
+        height: '50vh',
         position: 'relative',
         width: '100%',
         overflow: 'hidden',
