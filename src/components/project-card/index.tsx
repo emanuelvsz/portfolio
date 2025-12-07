@@ -49,9 +49,9 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
         position: absolute;
         inset: -20px;
         background-image: url(${image});
-        background-size: cover;
+        background-size: fit;
         background-position: center;
-        filter: blur(3px);
+        filter: blur(1.5px);
         z-index: 0;
       }
 
@@ -104,10 +104,6 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
       -webkit-backdrop-filter: blur(10px);
       border: 1px solid #989898;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
       padding: 0;
       cursor: pointer;
       z-index: 10;
@@ -121,7 +117,6 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
 
       &:hover {
         width: 125px;
-        transform: scale(1.05);
         gap: 8px;
 
         justify-content: flex-start;
@@ -150,7 +145,7 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
     `,
   };
 
-  const handleSeeProjectDetails = () => {};
+  const handleNavigateToProjectDetails = () => {};
 
   return (
     <div id={id} css={styles.card}>
@@ -171,14 +166,16 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
             ))}
           </Flex>
 
-          <div
+          <Flex
             css={styles.seeDetailsButton}
-            onClick={handleSeeProjectDetails}
+            onClick={handleNavigateToProjectDetails}
             className="details-button-wrapper"
+            justify="center"
+            align="center"
           >
             <ArrowRightOutlined css={styles.icon} />
             <span css={styles.downloadText}>See Details</span>
-          </div>
+          </Flex>
         </Flex>
       </Flex>
     </div>

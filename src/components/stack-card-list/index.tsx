@@ -3,7 +3,7 @@ import { THEME_COLORS } from '@config/theme';
 import { css } from '@emotion/react';
 import { Flex } from 'antd';
 import { stackList } from './data';
-import StackCard from '../stack-card';
+import StackCard from '@components/stack-card';
 
 export interface Stack {
   name: string;

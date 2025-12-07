@@ -18,7 +18,7 @@
     },
     {
       "id": 2,
-      "title": "Pauli.AI AI Chat Bot",
+      "title": "Real Estate AI Agent",
       "description": "AI Chat Bot using LLM’s and LLM Routing tools. Developed to help real estates investors to: find his best opportunities, evaluate a refourbish cost and earnings, know if a neighborhood is dangeours or not when buying a property.",
       "tags": ["BACKEND", "WEB", "MOBILE"]
     },

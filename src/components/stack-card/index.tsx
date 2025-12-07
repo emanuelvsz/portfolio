@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { THEME_BORDER_RADIUS } from '@config/theme';
-import { Stack } from '../stack-card-list';
 import { Card, Flex, Typography } from 'antd';
 import { CSSProperties } from 'react';
+import { Stack } from '@components/stack-card-list';
 
 const styles = {
   card: css`
@@ -26,7 +26,7 @@ const styles = {
     font-size: 0.9em;
   `,
   logo: css`
-    border-radius: ${THEME_BORDER_RADIUS.GENERAL} !important;
+    border-radius: ${THEME_BORDER_RADIUS.GENERAL}px !important;
   `,
 };
 
