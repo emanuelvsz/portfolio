@@ -7,6 +7,7 @@ import {
 import { css } from '@emotion/react';
 import { Flex } from 'antd';
 import { FormattedMessage } from 'react-intl';
+import { useNavigate } from 'react-router-dom';
 
 const styles = {
   header: css`
@@ -52,10 +53,14 @@ const styles = {
 };
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <Flex css={styles.container}>
       <Flex css={styles.header} align="center" justify="space-between">
-        <h4 css={styles.title}>Emanuel Vilela</h4>
+        <h4 css={styles.title} onClick={() => navigate('/')}>
+          Emanuel Vilela
+        </h4>
         <Flex css={styles.items} justify="center" align="center" gap={40}>
           <ul>
             <FormattedMessage id="header.option.home" tagName="li" />

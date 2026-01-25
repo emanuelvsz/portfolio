@@ -1,30 +1,16 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import { Flex, Typography } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { THEME_COLORS } from '@config/theme';
+import ProjectTag from '@components/project-tag';
 
 const { Title, Paragraph } = Typography;
 
-const ProjectTag = ({ label }: { label: string }) => {
-  const styles = css`
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid #989898;
-    border-radius: 20px;
-    padding: 0 16px;
-    font-weight: 500;
-    color: white;
-    white-space: nowrap;
-  `;
-
-  return <span css={styles}>{label}</span>;
-};
+const scroll = keyframes`
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+`;
 
 interface Props {
   id: string;
@@ -47,12 +33,13 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
       &::before {
         content: '';
         position: absolute;
-        inset: -20px;
+        inset: 0;
         background-image: url(${image});
-        background-size: fit;
+        background-size: cover;
         background-position: center;
-        filter: blur(1.5px);
+        filter: blur(1px);
         z-index: 0;
+        transform: scale(1.1);
       }
 
       &::after {
@@ -61,8 +48,8 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
         inset: 0;
         background: linear-gradient(
           180deg,
-          rgba(0, 0, 0, 0.2) 0%,
-          rgba(0, 0, 0, 0.6) 100%
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.8) 100%
         );
         z-index: 1;
       }
@@ -90,62 +77,84 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
     footer: css`
       margin-top: auto;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    `,
+    carouselContainer: css`
+      overflow: hidden;
+      width: 80%;
+      position: relative;
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+      );
+    `,
+    carouselTrack: css`
+      width: max-content;
+      animation: ${scroll} 20s linear infinite;
+
+      &:hover {
+        animation-play-state: paused;
+      }
     `,
     seeDetailsButton: css`
       position: absolute;
-      bottom: 24px;
-      right: 24px;
+      bottom: 20px;
+      right: 20px;
       border-radius: 999px;
       width: 40px;
       height: 40px;
-
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border: 1px solid #989898;
-
       padding: 0;
       cursor: pointer;
       z-index: 10;
-
       white-space: nowrap;
       overflow: hidden;
       transition:
         width 0.3s ease,
-        transform 0.3s ease,
         padding 0.3s ease;
 
       &:hover {
         width: 125px;
-        gap: 8px;
-
+        padding: 0 12px;
         justify-content: flex-start;
-        padding: 0 10px;
       }
     `,
-    downloadText: css`
+    buttonText: css`
       color: ${THEME_COLORS.WHITE_COLOR};
       font-weight: 500;
       font-size: 14px;
-
       opacity: 0;
       max-width: 0;
-
+      margin-left: 0;
       transition:
-        opacity 0.2s ease 0.1s,
-        max-width 0.3s ease;
+        opacity 0.2s ease,
+        max-width 0.3s ease,
+        margin 0.3s ease;
 
       .details-button-wrapper:hover & {
         opacity: 1;
         max-width: 100px;
+        margin-left: 8px;
       }
     `,
     icon: css`
       color: ${THEME_COLORS.WHITE_COLOR};
+      font-size: 16px;
     `,
   };
 
-  const handleNavigateToProjectDetails = () => {};
+  const handleNavigateToProjectDetails = () => {
+    console.log(`Navigating to project ${id}`);
+  };
 
   return (
     <div id={id} css={styles.card}>
@@ -154,17 +163,19 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
           <Title level={4} css={styles.title}>
             {title}
           </Title>
-          <Paragraph ellipsis={{ rows: 6 }} css={styles.description}>
+          <Paragraph ellipsis={{ rows: 4 }} css={styles.description}>
             {description}
           </Paragraph>
         </div>
 
-        <Flex align="center" justify="space-between" css={styles.footer}>
-          <Flex gap="8px" wrap="wrap">
-            {tags.map((tag) => (
-              <ProjectTag key={tag} label={tag} />
-            ))}
-          </Flex>
+        <div css={styles.footer}>
+          <div css={styles.carouselContainer}>
+            <Flex css={styles.carouselTrack} gap={8}>
+              {[...tags, ...tags].map((tag, index) => (
+                <ProjectTag key={`${tag}-${index}`} label={tag} />
+              ))}
+            </Flex>
+          </div>
 
           <Flex
             css={styles.seeDetailsButton}
@@ -174,9 +185,9 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
             align="center"
           >
             <ArrowRightOutlined css={styles.icon} />
-            <span css={styles.downloadText}>See Details</span>
+            <span css={styles.buttonText}>See Details</span>
           </Flex>
-        </Flex>
+        </div>
       </Flex>
     </div>
   );

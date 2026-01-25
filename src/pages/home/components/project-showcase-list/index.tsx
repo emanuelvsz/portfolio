@@ -4,37 +4,12 @@ import { THEME_PADDINGS } from '@config/theme';
 import { css } from '@emotion/react';
 import { Flex, Typography, Row, Col } from 'antd';
 import ProjectButton from '@components/projects-button';
+import { useNavigate } from 'react-router-dom';
+import { MOCK_PROJECTS } from '@pages/projects';
 
 const { Title } = Typography;
 
 const ProjectShowcaseList = () => {
-  const projects = [
-    {
-      id: 'rented-properties',
-      title: 'Rented Properties Management',
-      description:
-        "System to manage properties that's rented, it payments, it expenses, dashboard of expenses, returns, money earned and a system that collects inventory of a property using AI image analysis.",
-      image: 'https://i.imgur.com/8R0gWEv.jpeg',
-      tags: ['Backend', 'Frontend'],
-    },
-    {
-      id: 'pauli-chatbot',
-      title: 'Real Estate AI Agent',
-      description:
-        "AI Chat Bot using LLM's and LLM Routing tools. Developed to help real estates investors to: find his best opportunities, evaluate a refurbish cost and earnings, know if a neighborhood is dangerous or not when buying a property.",
-      image: 'https://i.imgur.com/MVHmWjF.jpeg',
-      tags: ['Backend', 'Frontend', 'Mobile'],
-    },
-    {
-      id: 'pauli-liquidity',
-      title: 'Mobile Liquidity Platform',
-      description:
-        "Transforms your vehicle into instant liquidity — without stopping your mobility. We buy your car, insure and maintain it, and you decide whether to keep driving or let it generate value. Quick, transparent, and fully flexible. Move freely, keep control, and unlock your car's true potential.",
-      image: 'https://i.imgur.com/0Buxd81.png',
-      tags: ['Backend', 'Frontend'],
-    },
-  ];
-
   const styles = {
     container: css`
       width: 100%;
@@ -79,8 +54,11 @@ const ProjectShowcaseList = () => {
       margin-block: 48px;
     `,
   };
+  const navigate = useNavigate();
 
-  const handleNavigateToProjectDetails = () => {};
+  const handleNavigateToProjectDetails = () => {
+    navigate('/projects');
+  };
 
   return (
     <Flex css={styles.container} vertical>
@@ -93,7 +71,7 @@ const ProjectShowcaseList = () => {
       </Flex>
       <Flex vertical>
         <Row gutter={[24, 24]}>
-          {projects.map((project) => (
+          {MOCK_PROJECTS.map((project) => (
             <Col key={project.id} xs={24} md={12} xl={8}>
               <div css={styles.cardWrapper}>
                 <ProjectCard
