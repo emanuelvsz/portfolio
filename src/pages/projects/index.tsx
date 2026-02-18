@@ -429,7 +429,6 @@ export function Projects() {
             <span css={styles.label}>Date Range</span>
             <RangePicker
               style={{ width: '100%' }}
-              value={filters.dateRange}
               suffixIcon={<CalendarOutlined />}
               onChange={(dates) =>
                 handleFilterChange('dateRange', dates as DateRange)

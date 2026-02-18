@@ -29,7 +29,8 @@
       "@pages/*": ["pages/*"],
       "@hooks/*": ["hooks/*"],
       "@utils/*": ["utils/*"],
-      "@config/*": ["config/*"]
+      "@config/*": ["config/*"],
+      "@lib/*": ["lib/*"]
     }
   },
   "include": ["src"],

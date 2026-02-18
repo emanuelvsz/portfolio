@@ -1,24 +1,52 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import { theme } from '@config/theme';
+import { css, Global } from '@emotion/react'; // Importar css e Global
 
 import I18nProvider from './contexts/i18n/Provider';
 import { Home } from './pages/home';
 import { Projects } from '@pages/projects';
+import Footer from '@components/footer';
+
+const APP_BACKGROUND = '#2f2b39'; 
+
+const styles = {
+  appWrapper: css`
+    background-color: ${APP_BACKGROUND};
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  `,
+};
 
 const App: React.FC = () => {
   return (
     <React.StrictMode>
       <ConfigProvider theme={theme(true)}>
         <I18nProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </BrowserRouter>
+          <Global
+            styles={css`
+              body, html {
+                margin: 0;
+                padding: 0;
+                background-color: ${APP_BACKGROUND};
+              }
+            `}
+          />
+
+          <div css={styles.appWrapper}>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </BrowserRouter>
+            <Footer />
+          </div>
         </I18nProvider>
       </ConfigProvider>
     </React.StrictMode>
