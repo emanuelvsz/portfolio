@@ -7,7 +7,7 @@ import {
   THEME_PADDINGS 
 } from '@config/theme';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import AnimatedButton from '@components/growable-button';
+import AnimatedButton from '@components/animated-button';
 
 const styles = {
   footerWrapper: css`
