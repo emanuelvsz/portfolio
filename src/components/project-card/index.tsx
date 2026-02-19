@@ -59,32 +59,31 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
       z-index: 2;
       height: 100%;
       padding: 24px;
+      box-sizing: border-box;
     `,
     textSection: css`
-      flex: 1;
+      width: 100%;
     `,
     title: css`
       &.ant-typography {
         color: white;
-        margin-bottom: 8px;
+        margin: 0 !important; 
       }
     `,
     description: css`
       &.ant-typography {
         color: rgba(255, 255, 255, 0.8);
+        margin: 0 !important;
       }
     `,
     footer: css`
       margin-top: auto;
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: flex-start;
+      position: relative;
     `,
     carouselContainer: css`
       overflow: hidden;
-      width: 80%;
+      width: 80%; 
       position: relative;
       mask-image: linear-gradient(
         to right,
@@ -104,8 +103,8 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
     `,
     seeDetailsButton: css`
       position: absolute;
-      bottom: 20px;
-      right: 20px;
+      bottom: 0;
+      right: 0; 
       border-radius: 999px;
       width: 40px;
       height: 40px;
@@ -113,7 +112,6 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border: 1px solid #989898;
-      padding: 0;
       cursor: pointer;
       z-index: 10;
       white-space: nowrap;
@@ -124,8 +122,7 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
 
       &:hover {
         width: 125px;
-        padding: 0 12px;
-        justify-content: flex-start;
+        padding-inline: 12px; 
       }
     `,
     buttonText: css`
@@ -149,6 +146,7 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
     icon: css`
       color: ${THEME_COLORS.WHITE_COLOR};
       font-size: 16px;
+      flex-shrink: 0;
     `,
   };
 
@@ -158,17 +156,24 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
 
   return (
     <div id={id} css={styles.card}>
-      <Flex vertical justify="space-between" css={styles.contentContainer}>
-        <div css={styles.textSection}>
+      <Flex 
+        vertical 
+        justify="space-between" 
+        align="start" 
+        css={styles.contentContainer}
+      >
+        
+        <Flex vertical gap={8} css={styles.textSection}>
           <Title level={4} css={styles.title}>
             {title}
           </Title>
           <Paragraph ellipsis={{ rows: 4 }} css={styles.description}>
             {description}
           </Paragraph>
-        </div>
+        </Flex>
 
         <div css={styles.footer}>
+      
           <div css={styles.carouselContainer}>
             <Flex css={styles.carouselTrack} gap={8}>
               {[...tags, ...tags].map((tag, index) => (
@@ -188,6 +193,7 @@ const ProjectCard = ({ image, title, description, tags, id }: Props) => {
             <span css={styles.buttonText}>See Details</span>
           </Flex>
         </div>
+
       </Flex>
     </div>
   );

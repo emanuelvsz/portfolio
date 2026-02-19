@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
 import { Flex, Typography, Row, Col } from 'antd';
 import ProjectButton from '@components/projects-button';
 import { useNavigate } from 'react-router-dom';
-import { MOCK_PROJECTS } from '@pages/projects';
+import { MOCK_PROJECTS } from '@data/projects';
 
 const { Title } = Typography;
 
