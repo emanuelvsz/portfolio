@@ -2,14 +2,21 @@
 import ProjectCard from '@components/project-card';
 import { THEME_PADDINGS } from '@config/theme';
 import { css } from '@emotion/react';
-import { Flex, Typography, Row, Col } from 'antd';
+import { Flex, Typography, Row, Col, Skeleton } from 'antd';
 import ProjectButton from '@components/projects-button';
 import { useNavigate } from 'react-router-dom';
-import { MOCK_PROJECTS } from '@data/projects';
+import { useListProjects } from '@contexts/i18n/use-list-projects';
 
 const { Title } = Typography;
 
 const ProjectShowcaseList = () => {
+  const navigate = useNavigate();
+
+  const { data: projects = [], isLoading } = useListProjects({
+    limit: 3,
+    sort: 'desc',
+  });
+
   const styles = {
     container: css`
       width: 100%;
@@ -54,7 +61,6 @@ const ProjectShowcaseList = () => {
       margin-block: 48px;
     `,
   };
-  const navigate = useNavigate();
 
   const handleNavigateToProjectDetails = () => {
     navigate('/projects');
@@ -69,22 +75,30 @@ const ProjectShowcaseList = () => {
         </Title>
         <div css={styles.rightLine} />
       </Flex>
+
       <Flex vertical>
         <Row gutter={[24, 24]}>
-          {MOCK_PROJECTS.map((project) => (
-            <Col key={project.id} xs={24} md={12} xl={8}>
-              <div css={styles.cardWrapper}>
-                <ProjectCard
-                  id={project.id}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  tags={project.tags}
-                />
-              </div>
-            </Col>
-          ))}
+          {isLoading
+            ? Array.from({ length: 3 }).map((_, index) => (
+                <Col key={index} xs={24} md={12} xl={8}>
+                  <Skeleton active paragraph={{ rows: 4 }} />
+                </Col>
+              ))
+            : projects.map((project) => (
+                <Col key={project.id} xs={24} md={12} xl={8}>
+                  <div css={styles.cardWrapper}>
+                    <ProjectCard
+                      id={project.id.toString()}
+                      title={project.title}
+                      description={project.description}
+                      image={project.images?.[0]}
+                      tags={project.stack}
+                    />
+                  </div>
+                </Col>
+              ))}
         </Row>
+
         <Flex justify="center" align="center" css={styles.footer}>
           <ProjectButton
             label="See More Projects"
