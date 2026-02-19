@@ -1,32 +1,117 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "name": "Emanuel Vilela",
-      "email": "emanuelvilela.dev@gmail.com",
-      "zipCode": "57303803",
-      "password": "Emanuel123@2025",
-      "phoneNumber": "+55 82 99695-5454"
-    }
-  ],
+  "user": {
+    "id": 1,
+    "name": "Emanuel Vilela",
+    "title": "Backend & AI Developer",
+    "email": "emanuelvilela.dev@gmail.com",
+    "location": "Brazil",
+    "phoneNumber": "+55 82 99695-5454",
+    "summary": "Full Stack and AI-focused developer specialized in building scalable systems, REST APIs, and AI-driven solutions for real estate and financial analysis.",
+    "mainSkills": [
+      "Node.js",
+      "TypeScript",
+      "Golang",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+      "REST APIs",
+      "Clean Architecture",
+      "OpenAI API",
+      "LLM Routing",
+      "Java",
+      "Kubernetes"
+    ],
+    "github": "https://github.com/emanuelvsz",
+    "linkedin": "https://linkedin.com/in/emanuelvsz"
+  },
   "projects": [
     {
       "id": 1,
       "title": "Rented Properties Management",
-      "description": "System to manage properties that’s rented, it payments, it expenses, dashboard of expenses, returns, money earned and a system that collects inventory of a property using AI image analysis.",
-      "tags": ["BACKEND", "WEB"]
+      "description": "System to manage rented properties, track payments, monitor expenses, and generate dashboards with financial performance insights. Includes AI-based inventory collection using image analysis.",
+      "role": "Full Stack Developer",
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "Python",
+        "Django",
+        "React",
+        "Tanstack"
+      ],
+      "architecture": "Hexagonal Architecture",
+      "database": "PostgreSQL",
+      "features": [
+        "Expense and income tracking",
+        "Financial performance dashboard",
+        "AI image analysis for inventory collection",
+        "JWT authentication"
+      ],
+      "github": "https://github.com/emanuelvsz/properties-management",
+      "demo": null,
+      "status": "Completed",
+      "images": ["https://i.imgur.com/8R0gWEv.jpeg"]
     },
     {
       "id": 2,
       "title": "Real Estate AI Agent",
-      "description": "AI Chat Bot using LLM’s and LLM Routing tools. Developed to help real estates investors to: find his best opportunities, evaluate a refourbish cost and earnings, know if a neighborhood is dangeours or not when buying a property.",
-      "tags": ["BACKEND", "WEB", "MOBILE"]
+      "description": "AI assistant for real estate investors that evaluates opportunities, estimates renovation costs, calculates ROI, and analyzes neighborhood risks using LLM routing.",
+      "role": "Full Stack Developer & AI Engineer",
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "OpenAI API",
+        "LangChain",
+        "Docker",
+        "Kubernetes",
+        "Microservices",
+        "AWS",
+        ""
+      ],
+      "architecture": "Hexagonal Architecture",
+      "database": "PostgreSQL",
+      "features": [
+        "LLM routing system",
+        "ROI calculation engine",
+        "Renovation cost estimation",
+        "Neighborhood risk analysis",
+        "Conversational AI interface"
+      ],
+      "github": null,
+      "demo": null,
+      "status": "Completed",
+      "images": ["https://i.imgur.com/MVHmWjF.jpeg"]
     },
     {
       "id": 3,
       "title": "Pauli.AI Mobile Liquidity",
-      "description": "Transforms your vehicle into instant liquidity — without stopping your mobility. We buy your car, insure and maintain it, and you decide whether to keep driving or let it generate value. Quick, transparent, and fully flexible. Move freely, keep control, and unlock your car’s true potential.",
-      "tags": ["BACKEND", "WEB"]
+      "description": "Platform that transforms vehicles into instant liquidity without compromising user mobility. Enables car acquisition, insurance management, and flexible usage decisions.",
+      "role": "Backend Developer",
+      "stack": [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "React",
+        "Python",
+        "Golang"
+      ],
+      "architecture": "Hexagonal Architecture",
+      "database": "PostgreSQL",
+      "features": [
+        "User and vehicle management",
+        "Liquidity evaluation engine",
+        "Contract management system",
+        "Financial projections"
+      ],
+      "github": null,
+      "demo": null,
+      "status": "Completed",
+      "images": ["https://i.imgur.com/0Buxd81.png"]
     }
   ]
 }

@@ -7,8 +7,6 @@ import {
   Typography,
   Flex,
   Button,
-  Row,
-  Col,
   Tag,
   Segmented,
 } from 'antd'
@@ -176,11 +174,19 @@ const styles = {
       color: white;
     }
   `,
+
+  cardWrapper: css`
+    height: 100%;
+    width: 100%;
+
+    & > div {
+      max-width: none !important;
+      width: 100% !important;
+      height: 100%;
+    }
+  `,
 }
 
-// =====================
-// COMPONENT
-// =====================
 
 const INITIAL_FILTERS = {
   name: '',
@@ -281,13 +287,11 @@ export function Projects() {
           ))}
         </div>
       </div>
-      <Row gutter={[24, 24]}>
+      <Flex css={styles.cardWrapper} gap={32}>
         {filteredProjects.map((project) => (
-          <Col key={project.id} xs={24} md={12} xl={8}>
             <ProjectCard {...project} />
-          </Col>
         ))}
-      </Row>
+      </Flex>
     </Page>
   )
 }
